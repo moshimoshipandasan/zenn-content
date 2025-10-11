@@ -1,0 +1,16 @@
+---
+title: "はじめてのVibecoding"
+emoji: "🌊"
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: 
+  - "ai"
+  - "Zenn"
+  - "github"
+  - "Tech blog"
+  - "codex"
+  - "vibecoding"
+published: false
+publication_name: "publication名"
+published_at: "2025-10-11 00:00"
+---
+ここから本文を書く
