@@ -1,5 +1,5 @@
 ---
-title: "はじめてのVibecoding"
+title: "Vibecodingをはじめよう①"
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: 
@@ -95,7 +95,7 @@ npm install -g @openai/codex
 
 3. 表示された URL をコピーし、ブラウザで [Codex Redirect URL ジェネレーター](https://bazaarjapan.github.io/codex-redirect-url/) を開く。
 
-4. フォームにコピーした URL を貼り付け、「コードを生成」ボタンを押す。
+4. ジェネレーターのリダイレクトURLの欄にコピーした URL を貼り付け、「コードを生成」ボタンを押す。
 ![](/images/image19.png)
 5. 生成されたリダイレクト URL をコピーして、ターミナルに貼り付け、Enter キーを押す。
 ![](/images/image20.png)
@@ -103,13 +103,15 @@ npm install -g @openai/codex
 ![](/images/image22.png)
 
 6. ブラウザで OpenAI ログイン → 認証を完了する。
+![](/images/image22-1.png)
 
 ## 5. Codex 利用開始
 - 認証が成功すると、ターミナルの Codex CLI がアクティブになり、プロンプトが Codex 用に切り替わる。
+![](/images/image22-2.png)
 
 ## トラブルシューティング
 - Codespaces のセッションがタイムアウトすると認証トークンも無効化されるため、再認証が必要になることがあるのでGitHubの右上のアイコンをクリックしSettingから左側メニューのCodespacesよりDefault idle timeoutの時間を30分から120分に変更するとよい。
-![](/images/image22.png)
+![](/images/image23.png)
 
 - `codex --yolo` が途中で終了した場合は、もう一度コマンドを実行して認証ステップからやり直す。
 
