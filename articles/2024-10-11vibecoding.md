@@ -8,7 +8,7 @@ topics:
   - "github"
   - "codex"
   - "vibecoding"
-published: false
+published: true
 published_at: "2025-10-11 00:00"
 ---
 ## Vibecodingとは
