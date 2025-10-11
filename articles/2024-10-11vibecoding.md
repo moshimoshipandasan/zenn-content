@@ -106,10 +106,10 @@ npm install -g @openai/codex
 
 ## 5. Codex 利用開始
 - 認証が成功すると、ターミナルの Codex CLI がアクティブになり、プロンプトが Codex 用に切り替わる。
-- 必要なコマンド（例：`help` で概要を確認）を実行して開発を継続。
 
 ## トラブルシューティング
-- インストール時に `permission denied` が出る場合は、`npm` コマンドに `--unsafe-perm` を付与するか、`nvm` などで適切な Node.js 環境を再構築する。
-- Codespaces のセッションがタイムアウトすると認証トークンも無効化されるため、再認証が必要になることがある。
+- Codespaces のセッションがタイムアウトすると認証トークンも無効化されるため、再認証が必要になることがあるのでGitHubの右上のアイコンをクリックしSettingから左側メニューのCodespacesよりDefault idle timeoutの時間を30分から120分に変更するとよい。
+![](/images/image22.png)
+
 - `codex --yolo` が途中で終了した場合は、もう一度コマンドを実行して認証ステップからやり直す。
 
