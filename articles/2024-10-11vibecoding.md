@@ -1,7 +1,7 @@
 ---
 title: "はじめてのVibecoding"
-emoji: "🌊"
-type: "idea" # tech: 技術記事 / idea: アイデア
+emoji: "📘"
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: 
   - "ai"
   - "Zenn"
@@ -9,7 +9,6 @@ topics:
   - "codex"
   - "vibecoding"
 published: false
-publication_name: "publication"
 published_at: "2025-10-11 00:00"
 ---
 ## Vibecodingとは
@@ -113,5 +112,4 @@ npm install -g @openai/codex
 - インストール時に `permission denied` が出る場合は、`npm` コマンドに `--unsafe-perm` を付与するか、`nvm` などで適切な Node.js 環境を再構築する。
 - Codespaces のセッションがタイムアウトすると認証トークンも無効化されるため、再認証が必要になることがある。
 - `codex --yolo` が途中で終了した場合は、もう一度コマンドを実行して認証ステップからやり直す。
-
 
