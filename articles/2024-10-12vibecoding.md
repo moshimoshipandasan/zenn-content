@@ -31,7 +31,7 @@ Codex が自動実行できる操作範囲を絞ります。おすすめは「Au
 
 - 今回は`Full Access`としますが、通常は`Auto`が安全です。
 - `Full Access`では破壊的操作（`rm -rf フォルダ名` 等）が実行できます。※絶対やってはいけません！
-- 謎の文字列`0;rgb:3b3b/3b3b/3b3b11;rgb:f8f8/f8f8/f8f8`が時々入りますが、たぶんバグなのでその都度消しましょう。
+- 謎の文字列`0;rgb:3b3b/3b3b/3b3b11;rgb:f8f8/f8f8/f8f8`が時々入りますが、たぶんバグなので、面倒ですがその度BackSpaceで消しましょう。
 
 ## Codexのモデルの設定 /model
 Codex CLIの入力欄で/modelと入力し、キーボードの Enterキー を押します。
@@ -48,7 +48,7 @@ gpt-5-codex (current) => › Low (current) を選択
 Codes CLIに下記を入力して実行してみましょう
 
 ```
-GitHub Issues を読み込む埋め込み掲示板を作って。GitHub Pages で公開できてる静的 HTML/CSS/JS を生成して。
+GitHub Issues を読み込む掲示板を作って。GitHub Pages で公開できてる HTML/CSS/JS を生成して。
 ```
 
 ## リモートリポジトリにコミットしてプッシュする
