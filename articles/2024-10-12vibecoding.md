@@ -1,3 +1,4 @@
+---
 title: "自然言語だけでプログラミング！Vibecodingをはじめよう②"
 emoji: "🛠️"
 type: "tech" # tech: 技術記事 / idea: アイデア
@@ -7,67 +8,38 @@ topics:
   - "github"
   - "codex"
   - "vibecoding"
-published: false
+published: true
 ---
 
-## ゴール
-Codex CLI の環境設定を「安全・再現可能」に整える。以後はこの設定で記事やコード編集を進める。
+## この章のゴール
+Codex CLI の環境設定を完了し、簡単なプログラムを作成します。
 
-## 必要条件
-- Node.js/npm が利用可能（`node -v`, `npm -v` で確認）
-- 本リポジトリを手元にクローン済み（前章から継続）
-
-## 手順（Step by step）
-1) 依存を入れる
-
+## Codex CLI を起動（前回の復習）
+通常は`yolo`を使わず起動します（全消し事故を防ぐ）。
+Codespaces環境なので全消しでも問題ないのでyoloモードで進めます。
 ```bash
-npm install
+codex --yolo
 ```
-
-2) Codex CLI を起動（通常モード）
-
-```bash
-codex
-```
-
-ブラウザで OpenAI 認証を完了する案内に従う。
-
-![](/images/2024-10-12vibecoding/image24.png)
-
-3) Approvals を設定（自動操作の安全ガード）
+![alt text](../images/2024-10-12vibecoding/Animation00.gif)
+## Approvals（権限）を設定 /approvals
+Codex が自動実行できる操作範囲を絞ります。おすすめは「Auto」。
 
 ```text
 /approvals
 ```
+![alt text](../images/2024-10-12vibecoding/Animation01.gif)
 
-- 推奨: `on-failure` もしくは `on-request`
-- 読み取りは許可、書き込み系はレビュー必須
-- 削除やリセット等の破壊的操作は常に手動確認
+- 今回は`Full Access`としますが、通常は`Auto`が安全です。
+- `Full Access`では破壊的操作（`rm -rf フォルダ名` 等）が実行できます。※絶対やってはいけません！
+- 謎の文字列`0;rgb:3b3b/3b3b/3b3b11;rgb:f8f8/f8f8/f8f8`が時々入りますが、たぶんバグなのでその都度消しましょう。
 
-![](/images/2024-10-12vibecoding/image25.png)
-
-4) 作業ブランチを用意
-
-```bash
-git switch -c docs/article-edit-YYYY-MM-DD
+## Codexのモデルの設定 /model
+Codex CLIの入力欄で/modelと入力し、キーボードの Enterキー を押します。
+```text
+/approvals
 ```
+![alt text](../images/2024-10-12vibecoding/Animation02.gif)
 
-5) Zenn プレビューで動作確認
+gpt-5-codex (current) => › Low (current) を選択
 
-```bash
-npx zenn preview   # http://localhost:8000
-```
 
-チェック: レンダリング、リンク、画像パス、Front Matter（`published: false`）。
-
-![](/images/2024-10-12vibecoding/image26.png)
-
-## 補足コマンド
-- `/status` 現在のセッション構成を表示
-- `/model` モデル/Reasoning の切替
-- `/review` 変更点レビュー
-
-## よくあるつまずき
-- 権限エラー: `/approvals` で必要最小限のみ許可
-- 画像が出ない: `/images/<記事フォルダ>/...` へのパスを再確認
-- 文字化け: ファイルのエンコーディングを UTF-8 に統一
