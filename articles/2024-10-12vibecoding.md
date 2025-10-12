@@ -42,4 +42,5 @@ Codex CLIの入力欄で/modelと入力し、キーボードの Enterキー を�
 
 gpt-5-codex (current) => › Low (current) を選択
 
-
+## はじめてのVibecoding！簡単なプログラムを作成してみよう
+ここでは`issueにログを残すGithub Pagesで公開できる掲示板を作成して`みましょう。
