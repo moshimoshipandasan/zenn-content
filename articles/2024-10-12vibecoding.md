@@ -56,22 +56,26 @@ GitHub Issues を読み込む掲示板を作って。GitHub Pages で公開で�
 Codex CLI を使う場合は、自然言語で指示してもOK。
 
 ```text
-ローカルでコミットして、同名ブランチへプッシュして
+ローカルでコミットして、リモートへプッシュして
 ```
 
 Codex は `git add/commit/push` を提案・実行します（/approvals の設定に従う）。
 
 ## GitHub Pagesでデプロイ
 デプロイとは、手元で編集したファイルをインターネット上で誰でも見られるように公開することです。GitHub Pages は GitHub が提供する静的サイトの配信サービスで、ブランチ上の HTML/CSS/JS をそのままホスティングします。この章では、最短の公開方法（リポジトリ直下の `index.html`）を説明します。
+まずは下記URLからGitHubに移動して対象のリポジトリを開きます。
+https://github.com/
+![alt text](/images/2024-10-12vibecoding/Animation03.gif)
 
 ルート直下に `index.html` を置く場合（最短ルート）
 
 1. リポジトリ直下に `index.html` を配置し、`main` にコミット/プッシュ。
 2. GitHub → 対象リポジトリ → `Settings` → `Pages` を開く。
+![alt text](/images/2024-10-12vibecoding/Animation04.gif)
 3. Build and deployment → `Source: Deploy from a branch` を選択。
 4. Branch: `main`、Folder: `/ (root)` を指定して `Save`。
 5. 数分後に公開 URL が表示されるのでアクセスして確認。
-
+![alt text](/images/2024-10-12vibecoding/Animation05.gif)
 補足
 - プロジェクト Pages の公開 URL は通常 `https://<ユーザー名>.github.io/<リポジトリ名>/`。
 - 公開は基本 Public リポジトリで運用（Private は権限に注意）。
