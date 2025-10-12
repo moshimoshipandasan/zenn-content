@@ -115,10 +115,10 @@ npm install -g @openai/codex@latest
 5. 生成されたリダイレクト URL をコピーして、ターミナルに貼り付け、キーボードの Enter キーを押す。
 ![](/images/image20.png)
 ---
-①を貼り付けてキーボードの Enter キーを押す。
+- ①を貼り付けてキーボードの Enter キーを押す。
 ![](/images/image21.png)
 ---
-②を貼り付けてキーボードの Enter キーを押す。
+- ②を貼り付けてキーボードの Enter キーを押す。
 ![](/images/image22.png)
 
 6. ブラウザで OpenAI ログイン → 認証を完了する。
