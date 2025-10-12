@@ -82,10 +82,10 @@ published_at: "2025-10-11 00:00"
 npm install -g @openai/codex@latest
 ```
 ![](/images/2024-10-11vibecoding/image11.png)
----
+
 ![](/images/2024-10-11vibecoding/image12.png)
 
-インストールが完了すると `codex` コマンドが利用できるようになる。
+- インストールが完了すると `codex` コマンドが利用できるようになる。
 
 ## 4. Codex の起動と認証
 1. Codex を YOLO モードで起動：
@@ -97,11 +97,11 @@ npm install -g @openai/codex@latest
 - デスクトップ環境などでCodexを起動する場合は`--yolo`オプションは付けずに`codex`だけで起動しましょう。yoloモードはすべのファイルの編集権限がCodex与えられるので重要なファイルを削除してしまう場合があります。現在のCodespaces環境ではシステムが消えても問題ないのでyoloモードで起動しています。
 ---
 ![](/images/2024-10-11vibecoding/image14.png)
----
+- 1. Sign in with ChatGPTを選ぶ
 ![](/images/2024-10-11vibecoding/image15.png)
----
+
 ![](/images/2024-10-11vibecoding/image16.png)
----
+
 ![](/images/2024-10-11vibecoding/image17.png)
 
 2. ターミナルに OpenAI ログイン用の OAuth 認証 URL が表示される。
@@ -114,10 +114,8 @@ npm install -g @openai/codex@latest
 
 5. 生成されたリダイレクト URL をコピーして、ターミナルに貼り付け、キーボードの Enter キーを押す。
 ![](/images/2024-10-11vibecoding/image20.png)
----
 - ①を貼り付けてキーボードの Enter キーを押す。
 ![](/images/2024-10-11vibecoding/image21.png)
----
 - ②を貼り付けてキーボードの Enter キーを押す。
 ![](/images/2024-10-11vibecoding/image22.png)
 
@@ -127,7 +125,6 @@ npm install -g @openai/codex@latest
 ## 5. Codex 利用開始
 - 認証が成功すると、ターミナルの Codex CLI がアクティブになり、プロンプトが Codex 用に切り替わる。
 ![](/images/2024-10-11vibecoding/image22-1-1.png)
-
 - ゴミ箱のマークをクリックしてbash消す
 ![](/images/2024-10-11vibecoding/image22-2.png)
 
