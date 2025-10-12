@@ -147,4 +147,5 @@ npm install -g @openai/codex@latest
 - `codex --yolo` が途中で終了した場合は、もう一度コマンドを実行して認証ステップからやり直す。
 - デスクトップ環境などでCodexを起動する場合は`--yolo`オプションは付けずに`codex`だけで起動しましょう。yoloモードはすべのファイルの編集権限がCodex与えられるので重要なファイルを削除してしまう場合があります。
 
-
+## 次のステップ
+https://zenn.dev/noboruando/articles/2024-10-12vibecoding
