@@ -105,7 +105,7 @@ npm install -g @openai/codex@latest
 >![](/images/2024-10-11vibecoding/image17.png)
 
 2. ターミナルに OpenAI ログイン用の OAuth 認証 URL が表示される。
-![](/images/2024-10-11vibecoding/image18.png)
+>![](/images/2024-10-11vibecoding/image18.png)
 
 3. 表示された URL をコピーし、ブラウザで [Codex Redirect URL ジェネレーター](https://bazaarjapan.github.io/codex-redirect-url/) を開く。
 
