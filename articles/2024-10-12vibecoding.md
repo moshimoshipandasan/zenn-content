@@ -77,6 +77,19 @@ Codex は `git add/commit/push` を提案・実行します（/approvals の設�
 ## GitHub Pagesでデプロイ
 静的な HTML/CSS/JS（例: Issues 埋め込み掲示板）を公開する手順です。
 
+ルート直下に `index.html` を置く場合（最短ルート）
+
+1. リポジトリ直下に `index.html` を配置し、`main` にコミット/プッシュ。
+2. GitHub → 対象リポジトリ → `Settings` → `Pages` を開く。
+3. Build and deployment → `Source: Deploy from a branch` を選択。
+4. Branch: `main`、Folder: `/ (root)` を指定して `Save`。
+5. 数分後に公開 URL が表示されるのでアクセスして確認。
+
+補足
+- プロジェクト Pages の公開 URL は通常 `https://<ユーザー名>.github.io/<リポジトリ名>/`。
+- 公開は基本 Public リポジトリで運用（Private は権限に注意）。
+
+### docs/ フォルダで運用する場合
 1. ルート直下に `docs/` を作成し、公開したいファイルを配置（例: `docs/index.html`）。
 2. GitHub → リポジトリ → Settings → Pages。
 3. Build and deployment: 「Branch」を選択 → `main` / `docs` を指定 → Save。
