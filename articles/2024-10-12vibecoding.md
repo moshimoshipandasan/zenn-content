@@ -42,5 +42,72 @@ Codex CLIの入力欄で/modelと入力し、キーボードの Enterキー を�
 
 gpt-5-codex (current) => › Low (current) を選択
 
-## はじめてのVibecoding！簡単なプログラムを作成してみよう
-ここでは`issueにログを残すGithub Pagesで公開できる掲示板を作成して`みましょう。
+## Vibecoding！簡単なプログラムを作成してみよう
+ここでは`Issuesにログとして活用するGithub Pagesで公開できる掲示板を作成`してみましょう。
+
+Codes CLIに下記を入力して実行してみましょう
+
+```
+GitHub Issues を読み込む埋め込み掲示板を作って。GitHub Pages で公開できて Google Sites に iframe で埋め込める静的 HTML/CSS/JS を生成してほしい。
+```
+
+## リモートリポジトリにコミットしてプッシュする
+ローカルの変更をリモートへ反映します（Conventional Commits 推奨）。
+
+```bash
+# 変更の確認
+git status
+
+# すべて追加してコミット
+git add -A
+git commit -m "docs(article): add part2 env setup and deployment"
+
+# ブランチをリモートへ（例: 現在の作業ブランチ）
+git push -u origin docs/article-edit-YYYY-MM-DD
+```
+
+Codex CLI を使う場合は、自然言語で指示してもOK。
+
+```text
+リモートリポジトリにコミットして、同名ブランチにプッシュして
+```
+
+Codex は `git add/commit/push` を提案・実行します（/approvals の設定に従う）。
+
+## GitHub Pagesでデプロイ
+静的な HTML/CSS/JS（例: Issues 埋め込み掲示板）を公開する手順です。
+
+1. ルート直下に `docs/` を作成し、公開したいファイルを配置（例: `docs/index.html`）。
+2. GitHub → リポジトリ → Settings → Pages。
+3. Build and deployment: 「Branch」を選択 → `main` / `docs` を指定 → Save。
+4. 数分後、Pages の URL が発行。アクセスして表示を確認。
+
+GitHub Actions でビルドが必要な場合（例: 生成物を `docs/` に出力する）
+
+```yaml
+# .github/workflows/pages.yml（例）
+name: Deploy Pages
+on: { push: { branches: [ main ] } }
+permissions: { contents: read, pages: write, id-token: write }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static
+        run: |
+          mkdir -p docs
+          cp -r site/* docs/  # 生成物を docs へ
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: 'docs' }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: ${{ steps.deployment.outputs.page_url }} }
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+補足
+- Zenn 記事の公開は Zenn 側で行います（`published: true`）。GitHub Pages はデモ/資料公開に活用。
