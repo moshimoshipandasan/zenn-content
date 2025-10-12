@@ -36,7 +36,7 @@ Codex が自動実行できる操作範囲を絞ります。おすすめは「Au
 ## Codexのモデルの設定 /model
 Codex CLIの入力欄で/modelと入力し、キーボードの Enterキー を押します。
 ```text
-/approvals
+/model
 ```
 ![alt text](/images/2024-10-12vibecoding/Animation02.gif)
 
