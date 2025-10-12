@@ -94,7 +94,7 @@ npm install -g @openai/codex@latest
    codex --yolo
    ```
 ![](/images/image13.png)
-デスクトップ環境などでCodexを起動する場合は`--yolo`オプションは付けずに`codex`だけで起動しましょう。yoloモードはすべのファイルの編集権限がCodex与えられるので重要なファイルを削除してしまう場合があります。
+- デスクトップ環境などでCodexを起動する場合は`--yolo`オプションは付けずに`codex`だけで起動しましょう。yoloモードはすべのファイルの編集権限がCodex与えられるので重要なファイルを削除してしまう場合があります。現在のCodespaces環境ではシステムが消えても問題ないのでyoloモードで起動しています。
 ---
 ![](/images/image14.png)
 ---
@@ -112,11 +112,13 @@ npm install -g @openai/codex@latest
 4. ジェネレーターのリダイレクトURLの欄にコピーした URL を貼り付け、「コードを生成」ボタンを押す。
 ![](/images/image19.png)
 
-5. 生成されたリダイレクト URL をコピーして、ターミナルに貼り付け、Enter キーを押す。
+5. 生成されたリダイレクト URL をコピーして、ターミナルに貼り付け、キーボードの Enter キーを押す。
 ![](/images/image20.png)
 ---
+①を貼り付けてキーボードの Enter キーを押す。
 ![](/images/image21.png)
 ---
+②を貼り付けてキーボードの Enter キーを押す。
 ![](/images/image22.png)
 
 6. ブラウザで OpenAI ログイン → 認証を完了する。
