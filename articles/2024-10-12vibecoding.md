@@ -62,7 +62,7 @@ Codex CLI を使う場合は、自然言語で指示してもOK。
 Codex は `git add/commit/push` を提案・実行します（/approvals の設定に従う）。
 
 ## GitHub Pagesでデプロイ
-静的な HTML/CSS/JS（例: Issues 埋め込み掲示板）を公開する手順です。
+デプロイとは、手元で編集したファイルをインターネット上で誰でも見られるように公開することです。GitHub Pages は GitHub が提供する静的サイトの配信サービスで、ブランチ上の HTML/CSS/JS をそのままホスティングします。この章では、最短の公開方法（リポジトリ直下の `index.html`）と、`docs/` フォルダ運用の2通りを説明します。
 
 ルート直下に `index.html` を置く場合（最短ルート）
 
