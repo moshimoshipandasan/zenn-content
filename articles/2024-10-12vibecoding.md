@@ -86,3 +86,6 @@ https://github.com/
 補足
 - プロジェクト Pages の公開 URL は通常 `https://<ユーザー名>.github.io/<リポジトリ名>/`。
 - 公開は基本 Public リポジトリで運用（Private は権限に注意）。
+
+## 次のステップ
+https://zenn.dev/noboruando/articles/2024-10-13vibecoding
