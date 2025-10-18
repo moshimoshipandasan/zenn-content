@@ -11,7 +11,7 @@ topics:
 published: true
 ---
 
-## この章のゴール
+## 今回のゴール
 Codex CLI の環境設定を完了し、簡単なプログラムを作成します。
 
 ## Codex CLI を起動（前回の復習）
@@ -48,7 +48,7 @@ gpt-5-codex (current) => › Low (current) を選択
 Codes CLIに下記を入力して実行してみましょう
 
 ```
-GitHub Issues を読み込む掲示板を作って。GitHub Pages で公開できてる HTML/CSS/JS を生成して。
+GitHub Issuesを掲示板ログとして使い、<Githubアカウント名>/my-first-codeで動くモバイル対応のindex.htmlを生成。投稿はIssue画面へ、Google Sitesのiframe埋め込み可。
 ```
 
 ## ローカルでコミットしてリモートへプッシュする
@@ -56,7 +56,7 @@ GitHub Issues を読み込む掲示板を作って。GitHub Pages で公開で�
 Codex CLI を使う場合は、自然言語で指示してもOK。
 
 ```text
-ローカルでコミットして、リモートへプッシュして
+コミットして、プッシュして
 ```
 
 Codex は `git add/commit/push` を提案・実行します（/approvals の設定に従う）。
