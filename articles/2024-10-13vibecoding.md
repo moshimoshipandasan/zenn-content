@@ -122,4 +122,6 @@ GitHub Pagesでデプロイ（Webに公開）
 - ブランチは安全な作業用レーン、PR は説明可能な変更の入場券、マージで本線（main）に合流。
 - Codex CLI には自然言語で十分。小さく速く回し、履歴を読みやすく保つのがコツ。
 
+## 次のステップ
+https://zenn.dev/noboruando/articles/2024-10-13vibecoding
 ---
