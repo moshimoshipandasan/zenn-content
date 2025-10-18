@@ -14,7 +14,7 @@ published: true
 
 ## ブランチを切って、デザインや機能を自由に切り替えよう！
 前回の掲示板アプリを改良する際、メインブランチを直接変更せず、デザインや機能ごとにブランチを切って開発・PR・マージできるようにしたい。Codex CLIに自然言語で指示して、この一連のブランチ運用を完結させられるようにする。
-![alt text](../images/2024-10-13vibecoding/image02.png)
+![alt text](/images/2024-10-13vibecoding/image02.png)
 
 ## 手順 1 — ブランチを切る
 
@@ -48,7 +48,7 @@ Codes CLIに下記を入力して実行してみましょう
 - `git add`（梱包）→ `git commit`（宛名＋封）→ `git push`（配送してリモートへ）
 
 ## 手順 4 — 🌈 GitHub Pages を main から colorful-board ブランチに切り替えてデプロイ（Webに公開）する手順
-![alt text](../images/2024-10-13vibecoding/image03.png)
+![alt text](/images/2024-10-13vibecoding/image03.png)
 1. **GitHub → 対象リポジトリを開く**
 
 2. **右上メニューから「Settings」** をクリック。
