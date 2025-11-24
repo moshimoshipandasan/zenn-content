@@ -1,5 +1,5 @@
 ---
-title: "NanobananaPro見本画像付きプロンプト集"
+title: "Gemini 3 Pro Image(NanobananaPro)見本画像付きプロンプト集"
 emoji: "🍌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: 
@@ -12,7 +12,7 @@ published_at: "2025-11-24 00:00"
 ---
 
 ## このページについて
-このページは、画像生成モデルGemini3 Pro(NanobananaPro)で使える、日本語プロンプト中心の見本集です。X等から拾ってきたものもあります。
+このページは、画像生成モデルGemini 3 Pro Image(NanobananaPro)で使える、日本語プロンプト中心の見本集です。X等から拾ってきたものもあります。
 
 実際の生成結果イメージとセットでプロンプトを整理し、  
 「どんな指示を書けば、どんな画像が出てくるのか」をすぐに確認するためにまとめてみました。
