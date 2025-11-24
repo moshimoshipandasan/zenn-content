@@ -20,7 +20,7 @@ published_at: "2025-11-24 00:00"
 
 ## 基本の使い方
 - 下の見本プロンプトをそのままコピーし[NotebookLM](https://notebooklm.google.com/)等のインフォグラフィックの枠貼り付ける
-![alt text](../images/2025-11-24nanobananapro/image00.png)
+![](/images/2025-11-24nanobananapro/image00.png)
 
 ## 見本プロンプト一覧
 
