@@ -74,10 +74,39 @@ app/
 
 それぞれの `page.tsx` に簡単なテキストを書けば、もうページとして動作します。
 
-![](/images/2025-11-26full-stack-development/nextjs_folder_structure.png)
+実際の中身はこんなイメージです（App Router / TypeScript）：
 
+```tsx
+// app/page.tsx
+export default function Page() {
+  return (
+    <main>
+      <h1>Welcome to Full Stack Playground</h1>
+      <p>ここは最新記事の概要を一覧するホームです。</p>
+    </main>
+  );
+}
 
----
+// app/about/page.tsx
+export default function Page() {
+  return (
+    <main>
+      <h1>About Page</h1>
+      <p>筆者の経歴や技術スタック、活動歴をまとめています。</p>
+    </main>
+  );
+}
+
+// app/settings/page.tsx
+export default function Page() {
+  return (
+    <main>
+      <h1>Settings</h1>
+      <p>通知やテーマなどのユーザー設定を管理するページの例です。</p>
+    </main>
+  );
+}
+```
 
 # 🎨 **Step3：共通レイアウト（layout.tsx）を設定する**
 

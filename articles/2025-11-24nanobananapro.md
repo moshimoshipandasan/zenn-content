@@ -7,7 +7,7 @@ topics:
   - "prompt"
   - "image"
   - "nanobananapro"
-published: ture
+published: true
 published_at: "2025-11-24 00:00"
 ---
 
