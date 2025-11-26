@@ -77,38 +77,16 @@ app/
 実際の中身はこんなイメージです（App Router / TypeScript）：
 
 ```tsx
-// app/page.tsx
-export default function Page() {
-  return (
-    <main>
-      <h1>Welcome to Full Stack Playground</h1>
-      <p>ここは最新記事の概要を一覧するホームです。</p>
-    </main>
-  );
-}
-```
-
-```tsx
 // app/about/page.tsx
-export default function Page() {
-  return (
-    <main>
-      <h1>About Page</h1>
-      <p>筆者の経歴や技術スタック、活動歴をまとめています。</p>
-    </main>
-  );
+export default function AboutPage() {
+  return <h1>About Page</h1>;
 }
 ```
 
 ```tsx
 // app/settings/page.tsx
-export default function Page() {
-  return (
-    <main>
-      <h1>Settings</h1>
-      <p>通知やテーマなどのユーザー設定を管理するページの例です。</p>
-    </main>
-  );
+export default function SettingsPage() {
+  return <h1>Settings Page</h1>;
 }
 ```
 
@@ -176,9 +154,6 @@ Next.js 13 以降のデフォルトは **Server Component**。
 * ふつうの関数は「手元のノートだけを見る」けれど、`fetch()` は「図書室に行って本を借りる」みたいに外の情報を取りに行ける。
 * Server Component で使うと、先生（サーバー）がまとめてメモを集めてからクラスに配るので、みんなのPCが軽くなる（高速＆効率的）。
 * エラーが出たときは「図書室が閉まっている」「本が見つからない」といった状態なので、メッセージを確認してもう一度お願いする（リトライ）イメージ。
-
-![](/images/2025-11-26full-stack-development/server_vs_client_components.png)
-
 
 例：`app/page.tsx`
 
