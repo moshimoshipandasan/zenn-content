@@ -74,7 +74,14 @@ app/
 
 それぞれの `page.tsx` に簡単なテキストを書けば、もうページとして動作します。
 
-実際の中身はこんなイメージです（App Router / TypeScript）：
+ここでは、それぞれのpage.tsxの中身を下記のようにしてみましょう（App Router / TypeScript）：
+
+```tsx
+// app/page.tsx
+export default function HomePage() {
+  return <h1>Home Page</h1>;
+}
+```
 
 ```tsx
 // app/about/page.tsx
