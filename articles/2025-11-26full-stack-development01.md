@@ -106,9 +106,15 @@ Next.js の App Router では、
 
 ```tsx
 // app/layout.tsx
+import type { ReactNode } from "react";
 import Link from "next/link";
+import "./globals.css";
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ja">
       <body>
@@ -165,6 +171,7 @@ Next.js 13 以降のデフォルトは **Server Component**。
 例：`app/page.tsx`
 
 ```tsx
+// app/page.tsx
 export default async function Page() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   const data = await res.json();
@@ -188,6 +195,7 @@ export default async function Page() {
 例：`app/settings/Counter.tsx`
 
 ```tsx
+// app/settings/Counter.tsx
 "use client";
 
 import { useState } from "react";
@@ -202,6 +210,7 @@ export default function Counter() {
 `settings/page.tsx` で読み込む：
 
 ```tsx
+// app/settings/page.tsx
 import Counter from "./Counter";
 
 export default function Page() {
@@ -227,6 +236,12 @@ Day01では、Next.js の基礎をしっかり固めました。
 * layout.tsx による共通レイアウトが使えた
 * `<Link>` による高速ページ遷移ができた
 * Server Component / Client Component の違いを実際に体験できた
+
+### 理解度チェック（確認問題）
+
+1. App Router では「フォルダ構造」と「URL」がどう対応するか説明できますか？
+2. `app/layout.tsx` は全ページに何を提供し、どこに配置しますか？
+3. 先頭に "use client" を書くのはどんなケースで、書かないとページはどう振る舞いますか？
 
 これで Day2 の Supabase 接続に進む準備が万端です。
 
