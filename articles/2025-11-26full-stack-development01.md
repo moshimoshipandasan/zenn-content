@@ -86,7 +86,9 @@ export default function Page() {
     </main>
   );
 }
+```
 
+```tsx
 // app/about/page.tsx
 export default function Page() {
   return (
@@ -96,7 +98,9 @@ export default function Page() {
     </main>
   );
 }
+```
 
+```tsx
 // app/settings/page.tsx
 export default function Page() {
   return (
@@ -113,15 +117,11 @@ export default function Page() {
 Next.js の App Router では、
 **`app/layout.tsx` が全ページ共通のレイアウト**になります。
 
-![](/images/2025-11-26full-stack-development/nextjs_layout_architecture.png)
-
-
 ヘッダーにページリンクを置いてみましょう。
 
 ```tsx
 // app/layout.tsx
 import Link from "next/link";
-import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -141,6 +141,9 @@ export default function RootLayout({ children }) {
 
 これで
 **どのページでも同じヘッダーが表示される**ようになります。
+
+ここまでできたら、プロジェクト直下で cd my-training → 
+npm run dev を実行し、ブラウザで http://localhost:3000 を開いてヘッダーが全ページで共通に出ることを確認してみよう。
 
 ---
 
