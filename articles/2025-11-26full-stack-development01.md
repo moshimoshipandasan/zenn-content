@@ -203,7 +203,7 @@ export default async function Page() {
   );
 }
 ```
-
+![alt text](/images/2025-11-26full-stack-development/image02.png)
 ---
 
 # 🧩 **Step6：Client Component を作ってみよう**
@@ -241,6 +241,7 @@ export default function Page() {
   );
 }
 ```
+![alt text](/images/2025-11-26full-stack-development/image03.png)
 
 ## Server と Client のちがいを超シンプルに整理
 
