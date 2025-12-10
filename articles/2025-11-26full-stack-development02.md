@@ -47,7 +47,7 @@ Next.js との相性が抜群。初心者でも扱いやすく、プロレベル
 3. プロジェクト名を入力（例：`my-training-db`）
 4. パスワードを設定
 5. 数分待つとプロジェクトが作成されます
-
+![](/images/2025-11-26full-stack-development/image04.png)
 これで Supabase の準備は完了です。
 
 ※ イメージ：プロジェクトは『新しいノート』を買った状態。まだ中は白紙です。次のステップで最初のページ（テーブル）を作ります。
@@ -58,24 +58,53 @@ Next.js との相性が抜群。初心者でも扱いやすく、プロレベル
 
 Supabase のダッシュボード左メニューから
 📌 **Table Editor** → **Create a new table**
+![](/images/2025-11-26full-stack-development/image05.png)
 
-以下のようなテーブルを作ります：
+### テーブル設定
 
-| 列名         | 型         | 補足                    |
-| ---------- | --------- | --------------------- |
-| id         | bigint    | Primary Key（identity） |
-| title      | text      | 必須（NOT NULL）          |
-| created_at | timestamp | default: now()        |
+- **Table name**: `posts`
+- **Enable Row Level Security (RLS)**: オフでOK（最初は簡単にするため）
 
-完成イメージ：
+### カラム設定（3つ作る）
+
+| カラム     | Type        | Default Value        | Primary    | その他                        |
+| ---------- | ----------- | -------------------- | ---------- | ----------------------------- |
+| id         | int8        | ⚙️ 歯車 → Identity    | ✅ チェック | -                             |
+| title      | text        | NULL のまま          | -          | ⚙️ 歯車 → Is Nullable: OFF    |
+| created_at | timestamptz | `now()` と入力       | -          | -                             |
+
+![カラム設定画面](/images/2025-11-26full-stack-development/image07.png)
+
+### 🔧 各カラムの詳しい設定方法
+
+#### id の設定
+歯車アイコン ⚙️ をクリックして「**Is Identity**」にチェックを入れます。
+これで自動的に 1, 2, 3... と連番が振られます。
+
+![Identity設定](/images/2025-11-26full-stack-development/image09.png)
+
+#### title の設定
+歯車アイコン ⚙️ をクリックして「**Is Nullable**」をオフにします。
+これで NOT NULL（必須入力）になります。
+
+#### created_at の設定
+⚠️ 表示される選択肢（Set as NULL / Set as empty string）は**使わないでください**。
+
+![Default Value選択肢](/images/2025-11-26full-stack-development/image08.png)
+
+代わりに：
+1. Default Value の入力欄に直接 **`now()`** と入力する
+2. Type は `timestamp` → `timestamptz` にすると時間帯も記録されて便利です
+
+### 完成イメージ
 
 ```
 posts
- ├ id (bigint, PK, identity)
- ├ title (text)
- └ created_at (timestamp, now())
+ ├ id (int8, PK, identity)
+ ├ title (text, NOT NULL)
+ └ created_at (timestamptz, default: now())
 ```
-
+![](/images/2025-11-26full-stack-development/image10.png)
 ---
 
 # 🟨 Step3：Next.js に Supabase を追加する
@@ -105,13 +134,18 @@ export const supabase = createClient(
 
 Supabase の
 **Project Settings → API** から取得した URL & anon key をセット：
-
 ```
 NEXT_PUBLIC_SUPABASE_URL=（あなたのURL）
 NEXT_PUBLIC_SUPABASE_ANON_KEY=（あなたのanon key）
 ```
+NEXT_PUBLIC_SUPABASE_URLの取得方法  
+![alt text](/images/2025-11-26full-stack-development/image12.png)
+
+NEXT_PUBLIC_SUPABASE_ANON_KEYの取得方法  
+![alt text](/images/2025-11-26full-stack-development/image13.png)
 
 ポイント：環境変数は『鍵付きロッカー』。リポジトリに直書きせず、`.env.local` に入れることで他人に鍵を渡さずに済みます。
+![](/images/2025-11-26full-stack-development/image14.png)
 
 ---
 
@@ -150,6 +184,7 @@ export default async function Page() {
   );
 }
 ```
+![](../images/2025-11-26full-stack-development/image15.png)
 
 データの流れイメージ（中学生向け）：
 - ブラウザのリクエストが『クラスの代表』として先生（Next.jsのサーバー）に届く。
@@ -163,7 +198,7 @@ export default async function Page() {
 👉 `http://localhost:3000/posts`
 
 すると、Supabase に保存したタイトルが一覧表示されます。
-
+![alt text](/images/2025-11-26full-stack-development/image11.png)
 ---
 
 # 🧠 Day02 で理解できたこと
