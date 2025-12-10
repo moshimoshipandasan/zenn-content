@@ -97,6 +97,25 @@ export default function SettingsPage() {
 }
 ```
 
+ここまでできたら、ターミナルで開発サーバーを起動してみましょう：
+
+```bash
+cd my-training
+npm run dev
+```
+
+以下のような出力が表示されれば成功です：
+
+```
+▲ Next.js 16.0.8 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.176:3000
+```
+
+ブラウザで http://localhost:3000 を開いて、3つのページ（`/`、`/about`、`/settings`）にアクセスできることを確認してみましょう。
+
+---
+
 # 🎨 **Step3：共通レイアウト（layout.tsx）を設定する**
 
 Next.js の App Router では、
@@ -133,8 +152,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 これで
 **どのページでも同じヘッダーが表示される**ようになります。
 
-ここまでできたら、プロジェクト直下で cd my-training → 
-npm run dev を実行し、ブラウザで http://localhost:3000 を開いてヘッダーが全ページで共通に出ることを確認してみよう。
+再度`npm run dev`を実行し、ブラウザで http://localhost:3000 を開いてヘッダーが全ページで共通に出ることを確認してみよう。
 
 ---
 
