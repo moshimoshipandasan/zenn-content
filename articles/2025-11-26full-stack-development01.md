@@ -278,3 +278,5 @@ Day01では、Next.js の基礎をしっかり固めました。
 Day2 では、
 **Supabase を使って Next.js とデータベースをつなげる**
 という、アプリ開発に必須の作業に取り組みます。
+
+👉 [Day02：Supabase と Next.js をつないでデータを表示する](https://zenn.dev/noboruando/articles/2025-11-26full-stack-development02)
