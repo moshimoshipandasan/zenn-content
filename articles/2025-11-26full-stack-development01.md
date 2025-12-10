@@ -151,8 +151,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 これで
 **どのページでも同じヘッダーが表示される**ようになります。
-
 再度`npm run dev`を実行し、ブラウザで http://localhost:3000 を開いてヘッダーが全ページで共通に出ることを確認してみよう。
+
+![alt text](/images/2025-11-26full-stack-development/image01.png)
 
 ---
 
